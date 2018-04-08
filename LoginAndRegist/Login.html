@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<meta name="author" content="m.ehaier.com">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport"  />
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta content="false" id="twcClient" name="twcClient" />
+	<link type="text/css" rel="stylesheet" href="css/v2/style.css">
+	<link rel="apple-touch-icon-precomposed" href="../../images/ehaier-icon.png"/>	
+	<link rel="shortcut icon" type="image/x-icon" href="../../images/ehaier-icon.png"/>  
+	<title>登录</title>
+<link type="text/css" rel="stylesheet" href="css/v2/member.css">
+
+</head>
+<body id="page">
+<header class="header"> 
+	<span class="fh left"><a href="javascript:history.back(1)">&nbsp;</a></span>  	登录
+  	<span class="hd_right right">
+	
+	<a class="right_but" href="../common/navigate.html">&nbsp;</a>
+</span>
+</header>
+<span id="login_errorMsg" style=" padding:10px;"></span>
+<div class="Login">
+  <div> 
+    <div class="Login_bottom">
+      <form id="loginForm" action="/mobile/member/memberLogin.html" method="post">
+        <div width="100%" border="0" cellspacing="0" cellpadding="0">
+          
+            <div height="60" align="center" valign="middle"><input type="text" id="mobileNum" value="" name="mobileNum" placeholder="QQ号/手机号/ID号/电话号" class="login_wbk"></div>
+          
+          
+            <div height="60" align="center" valign="middle"><input type="password" id="password" name="password" placeholder="请输入密码"  class="login_wbk"></div>
+          
+          <div height="60" align="left" valign="middle">
+            <input type="text" id="captcha" name="captcha" placeholder="请输入图形验证码"  class="login_wbk inputcheckbox" style=" width:49%;margin:0;">
+            <A id="getCaptcha" name="getCaptcha" class="hqxzm inputcheckbox" style="cursor: pointer;width:39%; margin:0; margin-left:2%;" >验证码</A> </d>
+          
+            <div height="60" align="center" valign="middle"><A href="#" id="memberLogin" class="dl_login">登录</A></div>
+          
+          
+          
+            <div height="55" align="left" style="float:left" valign="middle"><a href="toMemberRegist.html">注册</a></div>
+            <div height="55" align="right" style="float:right" valign="middle"><a href="toBackPassword.html">忘记密码</a></div>
+          
+          </div>
+      </form>
+    </div>
+   </div>
+</div>
+	<footer class="footer">
+	<div id="footer" class="ft_top">
+				<a href="toNoMemberRegist.html">登录</a>|<a href="toMemberRegist.html">注册</a>
+			</div>
+  	<p><a href="javascript:scroll(0,0)">返回顶部</a>|<a href="../../default.htm">返回首页</a>|<a href="../common/suggestInfos.html">意见反馈</a> </p>
+  	<p>Copyright©2018</p>
+</footer>
+</body>
+</html>

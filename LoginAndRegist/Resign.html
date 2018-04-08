@@ -10,8 +10,6 @@
 	<meta content="telephone=no" name="format-detection" />
 	<meta content="false" id="twcClient" name="twcClient" />
 	<link type="text/css" rel="stylesheet" href="css/v2/style.css">
-	<link rel="apple-touch-icon-precomposed" href="../../images/ehaier-icon.png"/>	
-	<link rel="shortcut icon" type="image/x-icon" href="../../images/ehaier-icon.png"/>  
 	<title>注册</title>
 <link type="text/css" rel="stylesheet" href="css/v2/member.css">
 </head>
@@ -24,47 +22,43 @@
 </header>
 <span id="login_errorMsg" style="padding:10px;"></span>
 <div class="Login">
-  <div class="Login_top">
-    <ul>
-      <li><A href="toNoMemberRegist.html">非手机号注册</A></li>
-      <li class="cur"><A href="toMemberRegist.html">手机号注册</A></li>
-    </ul>
-  </div>
   <div> 
-    <div class="Login_bottom" >
-      <form id="registForm" action="/mobile/member/memberRegist.html" onSubmit="return checkRegForm()" method="post">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td height="60" align="left" valign="middle"><input type="text" value="" id="mobileRegNum" name="mobileRegNum" placeholder="手机号" class="login_wbk">
-              <span id="mobileNumMsg"></span></td>
-          </tr>
-          <tr>
-            <td height="60" align="left" valign="middle"><input type="password" id="passwordReg" name="passwordReg" placeholder="设置密码"  class="login_wbk"></td>
-          </tr>
-          <tr>
-            <td height="60" align="left" valign="middle"><input type="password" id="repassword" name="repassword" placeholder="确认密码"  class="login_wbk"></td>
-          </tr>
-          <tr>
-            <td height="60" align="left" valign="middle"><input type="text" id="captcha" name="captcha" placeholder="短信验证码"  class="login_wbk inputcheckbox" style=" width:49%;margin:0;">
-              <A id="getCaptcha" name="getCaptcha" class="hqxzm inputcheckbox" style="cursor: pointer;width:39%; margin:0; margin-left:2%;" >获取验证码</A> </td>
-          </tr>
-          <tr>
-            <td height="60" align="center" valign="middle"><Span>注册即同意<a href="#"><span style=" font-size:14px; text-decoration:underline;">海尔商城用户服务协议</span></a></Span></td>
-          </tr>
-          <tr>
-            <td height="60" align="center" valign="middle">
-			<a href="#" id="memberRegist" class="dl_login">提交注册</a>
-			<a href="#" class="dl_login submiting" style="display:none;">快速提交中...</a>
-			</td>
-          </tr>
-          <tr>
-            <td height="30" >&nbsp;</td>
-          </tr>
-        </table>
-      </form>
-    </div>
-   </div>
-</div>
+      <div class="login_cont">
+          <div class="login_nav">
+            <div class="nav_slider">
+              <a href="#" class="signup focus">手机号注册</a>
+              <a href="#" class="signin">非手机号注册</a>
+            </div>
+          </div>
+          <form>
+            <div class="input_signup active">
+              <input class="input" id="user_name" type="text" aria-label="用户名（包含字母／数字／下划线" placeholder="用户名">
+              <div class="hint">请填写符合格式的用户名</div>
+              <input class="input" id="user_email" type="text" aria-label="邮箱" placeholder="邮箱">
+              <div class="hint">请填写邮箱</div>
+              <input class="input" id="phone" type="text" class="account" aria-label="手机号（仅支持中国大陆）" placeholder="手机号（仅支持中国大陆）">
+              <div class="hint">请填写手机号</div>
+              <input class="input" id="password" type="password" aria-label="密码" placeholder="密码（不少于 6 位）">
+              <div class="hint">请填写符合格式的密码</div>
+              <input class="input" id="repassword" type="password" aria-label="密码" placeholder="再次输入密码">
+              <div class="hint">请再次输入密码</div>
+              <input type="submit" id="submit" class="button" name="button" value="注册">
+            </div>
+          </form>
+          <form>
+            <div class="input_signin">
+              <input class="input" id="login_user_name" type="text" aria-label="用户名" placeholder="用户名">
+              <div class="hint">请输入用户名</div>
+              <input class="input" id="login_password" type="password" aria-label="密码" placeholder="密码">
+              <div class="hint">请输入密码</div>
+              <input type="submit" id="button" class="button" name="button" value="登录">
+              <div class="forget">
+                <a href="forget.html">忘记密码？</a>
+              </div>
+            </div>
+          </form>
+        </div>
+   
 
 <footer class="footer">
 	<div id="footer" class="ft_top">
@@ -73,6 +67,7 @@
   	<p><a href="javascript:scroll(0,0)">返回顶部</a>|<a href="#">返回首页</a>|<a href="#">意见反馈</a> </p>
   	<p>Copyright©2016 <a href="http://www.ggcard.net/" target="_blank">高高名片</a></p>
 </footer>
-
+<script src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="JS/login.js"></script>
 </body>
 </html>
