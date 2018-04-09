@@ -1,54 +1,78 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
 
-	<link type="text/css" rel="stylesheet" href="css/v2/style.css">
-	<title>注册</title>
-<link type="text/css" rel="stylesheet" href="css/v2/member.css">
+<head>
+  <meta charset="utf-8" />
+
+  <link type="text/css" rel="stylesheet" href="css/v2/style.css">
+  <title>注册</title>
+  <link type="text/css" rel="stylesheet" href="css/v2/member.css">
 
 </head>
+
 <body id="page">
-<header class="header"> 
-	<span class="fh left"><a href="javascript:history.back(1)">&nbsp;</a></span>  	注册
-  	<span class="hd_right right">
-	
-	<a class="right_but" href="../common/navigate.html">&nbsp;</a>
-</span>
-</header>
-<span id="login_errorMsg" style=" padding:10px;"></span>
-<div class="Login">
-  <div class="Login_top">
-    <ul>
-      <li class="cur"><A href="toNoMemberRegist.html">非手机号注册</A></li>
-      <li><A href="toMemberRegist.html">手机号注册</A></li>
-    </ul>
-  </div>
-  <div> 
-    <div class="Login_bottom">
-      <form id="loginForm" action="/mobile/member/memberLogin.html" method="post">
-        <div width="100%" border="0" cellspacing="0" cellpadding="0">
-          
-            <div height="60" align="center" valign="middle"><input type="text" id="mobileNum" value="" name="mobileNum" placeholder="手机号/邮箱" class="login_wbk"></div>
-         
-            <div height="60" align="center" valign="middle"><input type="password" id="password" name="password" placeholder="密码"  class="login_wbk"></div>
-         
-            <div height="60" align="center" valign="middle"><Span>注册即同意<a href="agreement.html"><span style=" font-size:14px; text-decoration:underline;">用户服务协议</span></a></Span></div>
-        
-            <div height="60" align="center" valign="middle">
-			<a href="#" id="memberRegist" class="dl_login">提交注册</a>
-			<a href="#" class="dl_login submiting" style="display:none;">快速提交中...</a>
-      </div>
-      </form>
+  <header class="header">
+    <span class="fh left">
+      <a href="javascript:history.back(1)">&nbsp;</a>
+    </span> 注册
+    <span class="hd_right right">
+
+      <a class="right_but" href="../common/navigate.html">&nbsp;</a>
+    </span>
+  </header>
+  <span id="login_errorMsg" style=" padding:10px;"></span>
+  <div class="Login">
+    <div class="Login_top">
+      <ul>
+        <li class="cur">
+          <A href="toNoMemberRegist.html">非手机号注册</A>
+        </li>
+        <li>
+          <A href="toMemberRegist.html">手机号注册</A>
+        </li>
+      </ul>
     </div>
-   </div>
-</div>
-	<footer class="footer">
-	<div id="footer" class="ft_top">
-				<a href="Login.html">登录</a>|<a href="toNoMemberRegist.html">注册</a>
-			</div>
-  	<p><a href="javascript:scroll(0,0)">返回顶部</a>|<a href="../../default.htm">返回首页</a>|<a href="../common/suggestInfos.html">意见反馈</a> </p>
-  	<p>Copyright©2018</p>
-</footer>
+    <div>
+      <div class="Login_bottom" margin-bottom:1000px>
+        <form id="loginForm" action="/mobile/member/memberLogin.html" method="post">
+          <div width="100%" border="0" cellspacing="0" cellpadding="0">
+
+            <div height="60"  align="center" valign="middle">
+              <input type="text" id="mobileNum" value="" name="mobileNum" placeholder="手机号/邮箱" class="login_wbk">
+            </div>
+
+            <div height="60" align="center" valign="middle">
+              <input type="password" id="password" name="password" placeholder="密码" class="login_wbk">
+            </div>
+
+            <div height="60" align="center" valign="middle">
+              <Span>注册即同意
+                <a href="agreement.html">
+                  <span style=" font-size:14px; text-decoration:underline;">用户服务协议</span>
+                </a>
+              </Span>
+            </div>
+
+            <div height="60" align="center" valign="middle">
+              <a href="#" id="memberRegist" class="dl_login">提交注册</a>
+              <a href="#" class="dl_login submiting" style="display:none;">快速提交中...</a>
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div id="footer" class="ft_top">
+        <a href="Login.html">登录</a>|
+        <a href="toNoMemberRegist.html">注册</a>
+      </div>
+      <p>
+        <a href="javascript:scroll(0,0)">返回顶部</a>|
+        <a href="../../default.htm">返回首页</a>|
+        <a href="../common/suggestInfos.html">意见反馈</a>
+      </p>
+      <p>Copyright©2018</p>
+    </footer>
 </body>
+
 </html>
