@@ -37,14 +37,38 @@
         <form id="loginForm" action="/mobile/member/memberLogin.html" method="post">
           <div width="100%" border="0" cellspacing="0" cellpadding="0">
 
-            <div height="60"  align="center" valign="middle">
-              <input type="text" id="mobileNum" value="" name="mobileNum" placeholder="手机号/邮箱" class="login_wbk">
+            <div height="60" align="left" valign="middle">
+              <input type="text" value="" id="mobileRegNum" name="mobileRegNum" style=" width:49%;margin:0;" placeholder="请填写ID（5-13位非手机号数字）" class="login_wbk">
+              <a>.gg5.cn</a>
+              <br>
+              <a>推荐使用QQ号注册</a><br>
+              <a>固定电话格式0733-12345678/073312345678</a>
+              <span id="mobileNumMsg"></span>
             </div>
 
             <div height="60" align="center" valign="middle">
               <input type="password" id="password" name="password" placeholder="密码" class="login_wbk">
             </div>
+            <div height="60" align="left" valign="middle">
+              <input type="text" id="captcha" name="captcha" placeholder="验证码" class="login_wbk inputcheckbox" style=" width:49%;margin:0;">
+              <A id="getCaptcha" name="getCaptcha" class="hqxzm inputcheckbox" style="cursor: pointer;width:39%; margin:0; margin-left:2%;">验证码图</A>
+            </div>
 
+            <div height="60" align="left" valign="middle">
+              <input type="password" id="passwordReg" name="passwordReg" placeholder="初始密码" class="login_wbk">
+            </div>
+
+            <div height="60" align="left" valign="middle">
+              <input type="password" id="repassword" name="repassword" placeholder="确认密码" class="login_wbk">
+            </div>
+            <div align="left" valign="middle">
+              <A>密保问题:</A>
+              <select name="cars" style="width: 39%;height: 40px;" >
+                <option value="volvo">高中班主任名字是?</option>
+                <option value="saab">小学的学校名是?</option>
+                <option value="fiat">父亲的名字是?</option>
+                <option value="audi">最喜欢的偶像是?</option>
+              </select>
             <div height="60" align="center" valign="middle">
               <Span>注册即同意
                 <a href="agreement.html">
@@ -54,7 +78,7 @@
             </div>
 
             <div height="60" align="center" valign="middle">
-              <a href="#" id="memberRegist" class="dl_login">提交注册</a>
+              <a href="#" id="memberRegist" class="dl_login">注册</a>
               <a href="#" class="dl_login submiting" style="display:none;">快速提交中...</a>
             </div>
         </form>
