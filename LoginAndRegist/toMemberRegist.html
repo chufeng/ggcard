@@ -33,28 +33,39 @@
       <div class="Login_bottom">
         <form id="registForm" action="/mobile/member/memberRegist.html" onSubmit="return checkRegForm()" method="post">
           <div width="100%" border="0" cellspacing="0" cellpadding="0">
-
             <div height="60" align="left" valign="middle">
+              <span style="color:red;float:left;line-height:36px">*</span>
+              <span style="width: 66px;display:block;float:left;line-height:36px">手机号:</span>
               <input type="text" value="" id="mobileRegNum" name="mobileRegNum" style=" width:49%;margin:0;" placeholder="请填写手机号码" class="login_wbk">
               <a>.gg5.cn</a>
               <span id="mobileNumMsg"></span>
             </div>
-
             <div height="60" align="left" valign="middle">
+              <span style="color:red;float:left;line-height:36px">*</span>
+              <span style="width: 66px;display:block;float:left;line-height:36px">验证码:</span>
+              <input type="text" id="captcha" name="captcha" placeholder="验证码" class="login_wbk inputcheckbox" style=" width:49%;margin:0;">
+              <img src="assets/icon.png" width="128" height="40" alt="验证码图片">
+            </div>
+            <div height="60" align="left" valign="middle">
+              <!-- <span style="color:red;float:left;line-height:36px">*</span> -->
+              <div style="width: 57px;display:block;float:left;line-height:36px"> </div>
               <input type="text" id="captcha" name="captcha" placeholder="短信验证码" class="login_wbk inputcheckbox" style=" width:49%;margin:0;">
-              <A id="getCaptcha" name="getCaptcha" class="hqxzm inputcheckbox" style="cursor: pointer;width:39%; margin:0; margin-left:2%;">获取验证码</A>
-            </div>
-
-            <div height="60" align="left" valign="middle">
-              <input type="password" id="passwordReg" name="passwordReg" placeholder="密码" class="login_wbk">
-            </div>
-
-            <div height="60" align="left" valign="middle">
-              <input type="password" id="repassword" name="repassword" placeholder="确认密码" class="login_wbk">
+              <A id="getCaptcha" name="getCaptcha" class="hqxzm inputcheckbox" style="cursor: pointer;width:39%; margin:0; margin-left:2%;">获取手机验证码</A>
             </div>
             <div align="left" valign="middle">
-              <A>密保问题:</A>
-              <select name="cars" style="width: 39%;height: 40px;" >
+              <span style="color:red;float:left;line-height:36px">*</span>
+              <span dir="rtl" style="width: 66px;display:block;float:left;line-height:36px">:密码</span>
+              <input type="password protection" id="passwordReg" name="passwordReg" placeholder="6~16个字符,区分大小写" class="login_wbk">
+            </div>
+
+            <div height="60" align="left" valign="middle">
+              <span style="color:red;float:left;line-height:36px">*</span>
+              <span style="width: 300px">确认密码:</span>
+              <input type="password protection" id="repassword" name="repassword" placeholder="请再次填写密码" class="login_wbk">
+            </div>
+            <div align="left" valign="middle">
+              <span>密保问题:</span>
+              <select name="cars" style="width: 39%;height: 40px;">
                 <option value="volvo">高中班主任名字是?</option>
                 <option value="saab">小学的学校名是?</option>
                 <option value="fiat">父亲的名字是?</option>
@@ -62,13 +73,17 @@
               </select>
             </div>
             <div align="left" valign="middle">
-              <a>密保答案:</a>
+              <span>密保答案:</span>
               <input type="password protection" id="protection" name="password protection" placeholder="密保答案" class="login_wbk">
             </div>
             <div height="60" align="center" valign="middle">
-              <Span>注册即同意
+              <input type="checkbox">
+              <Span>同意
                 <a href="agreement.html">
-                  <span style=" font-size:14px; text-decoration:underline;">用户服务协议</span>
+                  <span style=" font-size:14px; text-decoration:underline;">服务条款</span>
+                </a>和
+                <a href="agreement.html">
+                  <span style=" font-size:14px; text-decoration:underline;">隐私权相关政策</span>
                 </a>
               </Span>
             </div>
