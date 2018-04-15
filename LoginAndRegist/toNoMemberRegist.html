@@ -53,29 +53,36 @@
             </div>
             <span style="font-size:22px">(三选一)：</span>
             <button>在线支付</button>
-            <div align="left">
-              <div>
-                <img src="assets/icon.png" width="128" height="40" alt="验证码图片">
+            <div  class="pay">
+              <div class="zhifubao">
+                <img src="assets/icon.png" width="128" height="128" >
                 <br/>
+                <span  style="text-align: center;display:block;">支付宝</span>
+              </div>
+              <div  class="wechat">
+                <img src="assets/icon.png" width="128" height="128" >
+                <br/>
+                <span  style="text-align: center;display:block;">微信</span>
               </div>
             </div>
+          <br ><br >
             <div height="60" align="left" valign="middle">
               <span style="color:red;float:left;line-height:36px">*</span>
               <span style="width: 66px;display:block;float:left;line-height:36px">验证码:</span>
-              <input type="text" id="captcha" name="captcha" placeholder="验证码" class="login_wbk inputcheckbox" style=" width:49%;margin:0;">
-              <A id="getCaptcha" name="getCaptcha" class="hqxzm inputcheckbox" style="cursor: pointer;width:39%; margin:0; margin-left:2%;">验证码图</A>
+              <input type="text" id="captcha" name="captcha" placeholder="验证码" class="login_wbk" >
+              <A id="getCaptcha" name="getCaptcha" class="hqxzm inputcheckbox" >验证码图</A>
             </div>
 
             <div height="60" align="left" valign="middle">
               <span style="color:red;float:left;line-height:36px">*</span>
               <span style="width: 66px;display:block;float:left;line-height:36px">初始密码:</span>
-              <input type="password" style=" width:49%;margin:0;" id="passwordReg" name="passwordReg" placeholder="初始密码" class="login_wbk">
+              <input type="password"  id="passwordReg" name="passwordReg" placeholder="初始密码" class="login_wbk">
             </div>
 
             <div height="60" align="left" valign="middle">
               <span style="color:red;float:left;line-height:36px">*</span>
               <span style="width: 66px;display:block;float:left;line-height:36px">重复密码:</span>
-              <input type="password" id="repassword" style=" width:49%;margin:0;" name="repassword" placeholder="确认密码" class="login_wbk">
+              <input type="password" id="repassword"  name="repassword" placeholder="确认密码" class="login_wbk">
             </div>
             <div align="left" valign="middle">
               <spab>密保问题:</span>
