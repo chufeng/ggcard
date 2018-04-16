@@ -1,132 +1,113 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <link type="text/css" rel="stylesheet" href="css/v2/style.css">
-  <title>注册</title>
-  <link type="text/css" rel="stylesheet" href="css/v2/member.css">
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link type="text/css" rel="stylesheet" href="css/v2/style.css">
+    <title>注册</title>
+    <link type="text/css" rel="stylesheet" href="css/v2/member.css">
 </head>
 
 <body id="page">
-  <header class="header">
-    <span class="fh left">
-      <a href="javascript:history.back(1)">&nbsp;</a>
-    </span> 注册
-    <span class="hd_right right">
-
-      <a class="right_but" href="../common/navigate.html">&nbsp;</a>
-    </span>
-  </header>
-  <span id="login_errorMsg" style=" padding:10px;"></span>
-  <div class="Login">
+<header class="header">注册</header>
+<span id="login_errorMsg" style="padding: 8px;font-size: 1.3rem;color: red;">注册失败</span>
+<div class="Login">
     <div class="Login_top">
-      <ul>
-        <li class="cur">
-          <A href="toNoMemberRegist.html">非手机号注册</A>
-        </li>
-        <li>
-          <A href="toMemberRegist.html">手机号注册</A>
-        </li>
-      </ul>
+        <ul>
+            <li class="cur"><A href="toNoMemberRegist.html">非手机号注册</A></li>
+            <li><A href="toMemberRegist.html">手机号注册</A></li>
+        </ul>
     </div>
-    <div>
-      <div class="Login_bottom" margin-bottom:1000px>
-        <form id="loginForm" action="/mobile/member/memberLogin.html" method="post">
-          <div width="100%" border="0" cellspacing="0" cellpadding="0">
-
-            <div height="60" style="height: 80px;" align="left" valign="middle">
-              <span style="color:red;float:left;line-height:36px">*</span>
-              <span style="width: 66px;display:block;float:left;line-height:36px">ID:</span>
-              <input type="text" value="" id="mobileRegNum" name="mobileRegNum" style=" width:49%;margin:0;" placeholder="请填写ID（5-13位非手机号数字）"
-                class="login_wbk">
-              <a>.gg5.cn</a>
-              <br>
-              <div style="margin-left:75px">
-                <a>推荐使用QQ号注册</a>
+    <div class="Login_bottom">
+        <form id="loginForm" action="register.html" onSubmit="return checkRegForm()" method="post">
+            <div style="height: 80px;" align="left">
+                <span style="color:red;float:left;line-height:36px">*</span>
+                <span style="width: 66px;display:block;float:left;line-height:36px">ID:</span>
+                <input type="text" value="" id="mobileRegNum" name="mobileRegNum" style=" width:49%;margin:0;" placeholder="请填写ID(5-13位非手机号数字)" class="login_wbk">
+                <span style="width: 66px;line-height:36px;font-size: 1.3rem;">.gg5.cn</span>
                 <br>
-                <a>固定电话格式0733-12345678/073312345678</a>
-                <span id="mobileNumMsg"></span>
-              </div>
+                <div style="margin-left:75px">
+                    <a>推荐使用QQ号注册</a>
+                    <br>
+                    <a>固定电话格式0733-12345678/073312345678</a>
+                    <span id="mobileNumMsg"></span>
+                </div>
             </div>
             <span style="font-size:22px">(三选一)：</span>
             <button>在线支付</button>
             <div  class="pay">
-              <div class="zhifubao">
-                <img src="assets/icon.png" width="128" height="128" >
-                <br/>
-                <span  style="text-align: center;display:block;">支付宝</span>
-              </div>
-              <div  class="wechat">
-                <img src="assets/icon.png" width="128" height="128" >
-                <br/>
-                <span  style="text-align: center;display:block;">微信</span>
-              </div>
+                <div class="zhifubao">
+                    <img src="assets/icon.png" width="128" height="128" >
+                    <br/>
+                    <span  style="text-align: center;display:block;">支付宝</span>
+                </div>
+                <div  class="wechat">
+                    <img src="assets/icon.png" width="128" height="128" >
+                    <br/>
+                    <span  style="text-align: center;display:block;">微信</span>
+                </div>
             </div>
-          <br ><br >
-            <div height="60" align="left" valign="middle">
-              <span style="color:red;float:left;line-height:36px">*</span>
-              <span style="width: 66px;display:block;float:left;line-height:36px">验证码:</span>
-              <input type="text" id="captcha"  style="width: 50%;" name="captcha" placeholder="验证码" class="login_wbk" >
-              <A id="getCaptcha" name="getCaptcha" class="hqxzm inputcheckbox" >验证码图</A>
-            </div>
-
-            <div height="60" align="left" valign="middle">
-              <span style="color:red;float:left;line-height:36px">*</span>
-              <span style="width: 66px;display:block;float:left;line-height:36px">初始密码:</span>
-              <input type="password"  id="passwordReg" name="passwordReg" placeholder="初始密码" class="login_wbk">
+            <div style="clear: both;height: 1rem"></div>
+            <div align="left">
+                <span style="color:red;float:left;line-height:36px">*</span>
+                <span style="width: 66px;display:block;float:left;line-height:36px">验证码:</span>
+                <input type="text" id="captcha"  style="width: 50%;" name="captcha" placeholder="验证码" class="login_wbk" >
+                <img src="captcha.png" alt="验证码图" width="200" height="80">
             </div>
 
-            <div height="60" align="left" valign="middle">
-              <span style="color:red;float:left;line-height:36px">*</span>
-              <span style="width: 66px;display:block;float:left;line-height:36px">重复密码:</span>
-              <input type="password" id="repassword"  name="repassword" placeholder="确认密码" class="login_wbk">
+            <div align="left">
+                <span style="color:red;float:left;line-height:36px">*</span>
+                <span style="width: 66px;display:block;float:left;line-height:36px">初始密码:</span>
+                <input type="password"  id="passwordReg" name="passwordReg" placeholder="初始密码" class="login_wbk">
             </div>
-            <div align="left" valign="middle">
-                <span>&nbsp</span>
-              <span>密保问题:</span>
-                <select name="cars" style="width: 39%;height: 40px;">
-                  <option value="volvo">高中班主任名字是?</option>
-                  <option value="saab">小学的学校名是?</option>
-                  <option value="fiat">父亲的名字是?</option>
-                  <option value="audi">最喜欢的偶像是?</option>
+
+            <div align="left">
+                <span style="color:red;float:left;line-height:36px">*</span>
+                <span style="width: 66px;display:block;float:left;line-height:36px">重复密码:</span>
+                <input type="password" id="repassword"  name="repassword" placeholder="确认密码" class="login_wbk">
+            </div>
+            <div align="left">
+                <span>&nbsp;</span>
+                <span>密保问题:</span>
+                <select name="cars" style="width: 85%;height: 40px;">
+                    <option value="volvo">高中班主任名字是?</option>
+                    <option value="saab">小学的学校名是?</option>
+                    <option value="fiat">父亲的名字是?</option>
+                    <option value="audi">最喜欢的偶像是?</option>
                 </select>
             </div>
-                <div align="left" valign="middle">
-                    <span>&nbsp</span>
-                  <span>密保答案:</span>
-                  <input type="password" id="protection" name="password protection" placeholder="密保答案" class="login_wbk">
-                </div>
-                <div height="60" align="center" valign="middle">
-                  <Span>注册即同意
-                    <a href="agreement.html">
-                      <span style=" font-size:14px; text-decoration:underline;">用户服务协议</span>
-                    </a>
-                  </Span>
-                </div>
+            <div align="left">
+                <span>&nbsp;</span>
+                <span>密保答案:</span>
+                <input type="password" id="protection" name="password protection" placeholder="密保答案" class="login_wbk">
+            </div>
+            <div align="center">
+                        <span>
+                            注册即同意
+                            <a href="agreement.html"><span style=" font-size:14px; text-decoration:underline;">用户服务协议</span></a>
+                        </span>
+            </div>
 
-                <div height="60" align="center" valign="middle">
-                  <a href="#" id="memberRegist" class="dl_login">注册</a>
-                  <a href="#" class="dl_login submiting" style="display:none;">快速提交中...</a>
-                </div>
+            <div align="center">
+                <a href="#" id="memberRegist" class="dl_login">注册</a>
+                <a href="#" class="dl_login submiting" style="display:none;">快速提交中...</a>
+            </div>
         </form>
-        </div>
-        </div>
-      </div>
-      <footer class="footer">
-        <div id="footer" class="ft_top">
-          <a href="Login.html">登录</a>|
-          <a href="toNoMemberRegist.html">注册</a>
-        </div>
-        <p>
-          <a href="javascript:scroll(0,0)">返回顶部</a>|
-          <a href="../../default.htm">返回首页</a>|
-          <a href="../common/suggestInfos.html">意见反馈</a>
-        </p>
-        <p>Copyright©2018</p>
-      </footer>
+    </div>
+</div>
+<footer class="footer">
+    <div id="footer" class="ft_top">
+        <a href="Login.html">登录</a>|
+        <a href="toNoMemberRegist.html">注册</a>
+    </div>
+    <p>
+        <a href="javascript:scroll(0,0)">返回顶部</a>|
+        <a href="../../default.htm">返回首页</a>|
+        <a href="../common/suggestInfos.html">意见反馈</a>
+    </p>
+    <p>Copyright©2018</p>
+</footer>
 </body>
 
 </html>
