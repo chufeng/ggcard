@@ -144,7 +144,7 @@ a.activemsg{ color:#32beff; text-align:left; line-height:2em; padding-bottom:10p
   .forget a {
     text-decoration: none; }
 /* mine */
-div[type=info]{ width: 100%;
+button[type=info]{ width: 100%;
  height: auto;
   overflow: hidden;
   padding: 10px;
