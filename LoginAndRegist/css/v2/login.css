@@ -169,3 +169,5 @@ button[type=info]{ width: 100%;
 div[type="forget"]{
   text-align:center; border-style: solid;margin-bottom:10px;  border-width: 1px;
 }
+/* #forget */
+div.forget a.dl_login{ background:#0059a9; width: 10%; color:#fff; font-size:1rem; border:1px #005097 solid; width:10%;  }
